@@ -6,11 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Narendra Koya | Frontend Developer</title>
     <meta name="description"
-        content="Portfolio of Narendra Koya, a frontend developer focused on performance and clean UI." />
+        content="Portfolio of Narendra Koya, a frontend developer building performant, scalable, and accessible web apps with React & Next.js." />
+
+    <!-- ✅ SEO Keywords -->
+    <meta name="keywords"
+        content="Narendra Koya, frontend developer, React.js, Next.js, TypeScript, Tailwind CSS, portfolio" />
+
+    <!-- ✅ Open Graph -->
+    <meta property="og:title" content="Narendra Koya | Frontend Developer Portfolio" />
+    <meta property="og:description"
+        content="Building performant, scalable, and accessible web apps with React & Next.js." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="preview.png" /> <!-- replace with actual preview image -->
+    <meta property="og:url" content="https://narendrakoya.dev" /> <!-- replace with your real domain -->
+
+    <!-- ✅ Schema Markup -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Narendra Koya",
+    "url": "https://narendrakoya.dev",
+    "jobTitle": "Frontend Developer",
+    "sameAs": [
+      "https://github.com/NarendraKoya",
+      "https://linkedin.com/in/narendra-koya"
+    ],
+    "knowsAbout": ["React.js", "Next.js", "TypeScript", "Frontend Development"]
+  }
+  </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -20,170 +50,278 @@
         <nav class="nav" aria-label="Primary navigation">
             <a href="#" class="logo" aria-current="page">Narendra Koya</a>
             <ul class="nav-list" role="menubar">
-                <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
-                <li role="none"><a href="#skills" role="menuitem" tabindex="0">Skills</a></li>
-                <li role="none"><a href="#projects" role="menuitem" tabindex="0">Projects</a></li>
-                <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#achievements" role="menuitem">Achievements</a></li>
+                <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
-            <button id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode"
-                aria-pressed="false">🌓</button>
+
+            <!-- Add a container for the buttons -->
+            <div class="nav-buttons">
+                <button id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode"
+                    aria-pressed="false">🌓</button>
+                <button id="menu-toggle" aria-label="Open menu">☰</button>
+            </div>
         </nav>
     </header>
 
     <main role="main">
+        <!-- ✅ Intro -->
         <section class="intro" aria-label="Introduction">
-            <!-- Animated blobs -->
-            <div class="blob blob1"></div>
-            <div class="blob blob2"></div>
-            <div class="blob blob3"></div>
-
-            <h1>Hello, I'm Narendra Koya</h1>
-            <p>A frontend developer focused on performance &amp; clean UI.</p>
-            <button id="download-cv" aria-label="Download my CV">Download CV</button>
+            <h1><span id="typewriter-name"></span></h1>
+            <p class="tagline">
+                <span id="typewriter-tagline"></span>
+            </p>
+            <button id="download-cv" aria-label="Download my CV" onclick="window.open('Narendra-Koya-CV.pdf')">Download
+                CV</button>
         </section>
 
+        <!-- ✅ About -->
         <section id="about" tabindex="-1" aria-labelledby="about-heading">
             <h2 id="about-heading">About Me</h2>
             <p>
                 I'm a passionate frontend developer with 1+ years of experience building responsive web applications.
                 My tech stack includes React.js, Next.js, TypeScript, Tailwind CSS, and Node.js.
                 I specialize in optimizing performance and creating intuitive user interfaces.
-                When I'm not coding, I enjoy exploring UI/UX design trends and contributing to open-source projects.
             </p>
         </section>
 
+        <!-- ✅ Skills -->
         <section id="skills" tabindex="-1" aria-labelledby="skills-heading">
             <h2 id="skills-heading">Skills</h2>
 
             <div class="skill-category">
                 <h3>Languages</h3>
                 <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">HTML5 <span class="tooltip"
-                            role="tooltip">Advanced: Semantic markup</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">CSS3 <span class="tooltip"
-                            role="tooltip">Advanced: Modern styling &amp; animations</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">JavaScript (ES6+) <span class="tooltip"
-                            role="tooltip">Advanced: Modern JavaScript</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">TypeScript <span class="tooltip"
-                            role="tooltip">Advanced: Type-safe JavaScript</span></div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-html5-plain colored skill-logo" aria-hidden="true"></i>
+                        HTML5
+                        <span class="tooltip" role="tooltip">Semantic markup</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-css3-plain colored skill-logo" aria-hidden="true"></i>
+                        CSS3
+                        <span class="tooltip" role="tooltip">Modern styling &amp; animations</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-javascript-plain colored skill-logo" aria-hidden="true"></i>
+                        JavaScript (ES6+)
+                        <span class="tooltip" role="tooltip">Modern JavaScript</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-typescript-plain colored skill-logo" aria-hidden="true"></i>
+                        TypeScript
+                        <span class="tooltip" role="tooltip">Type-safe JavaScript</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Frameworks and Libraries</h3>
+                <h3>Frameworks &amp; Libraries</h3>
                 <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">React.js <span class="tooltip"
-                            role="tooltip">Advanced: Building dynamic UIs</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">Next.js <span class="tooltip"
-                            role="tooltip">Advanced: Server-side rendering &amp; static sites</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">Vue.js <span class="tooltip"
-                            role="tooltip">Intermediate: Component-based UIs</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">Tailwind CSS <span class="tooltip"
-                            role="tooltip">Advanced: Utility-first CSS</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">Material UI <span class="tooltip"
-                            role="tooltip">Intermediate: Component library</span></div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-react-original colored skill-logo" aria-hidden="true"></i>
+                        React.js
+                        <span class="tooltip" role="tooltip">Building dynamic UIs</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-nextjs-original-wordmark skill-logo" aria-hidden="true"></i>
+                        Next.js
+                        <span class="tooltip" role="tooltip">Server-side rendering &amp; static sites</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-vuejs-plain colored skill-logo" aria-hidden="true"></i>
+                        Vue.js
+                        <span class="tooltip" role="tooltip">Component-based UIs</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-tailwindcss-original colored skill-logo" aria-hidden="true"></i>
+                        Tailwind CSS
+                        <span class="tooltip" role="tooltip">Utility-first CSS</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-redux-original skill-logo" aria-hidden="true"></i>
+                        Redux Toolkit
+                        <span class="tooltip" role="tooltip">Global State Management</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-materialui-plain colored skill-logo" aria-hidden="true"></i>
+                        Material UI
+                        <span class="tooltip" role="tooltip">Component library</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Build Tools</h3>
+                <h3>Build Tools &amp; Package Managers</h3>
                 <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">Webpack <span class="tooltip"
-                            role="tooltip">Intermediate: Module bundling</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">Babel <span class="tooltip"
-                            role="tooltip">Intermediate: JavaScript transpiling</span></div>
-                    <div class="skill-tag" role="listitem" tabindex="0">Vite <span class="tooltip"
-                            role="tooltip">Intermediate: Fast build tool</span></div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-webpack-plain colored skill-logo" aria-hidden="true"></i>
+                        Webpack
+                        <span class="tooltip" role="tooltip">Module bundling</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-babel-plain colored skill-logo" aria-hidden="true"></i>
+                        Babel
+                        <span class="tooltip" role="tooltip">JavaScript transpiling</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-vitejs-plain colored skill-logo" aria-hidden="true"></i>
+                        Vite
+                        <span class="tooltip" role="tooltip">Fast build tool</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-npm-original-wordmark colored skill-logo" aria-hidden="true"></i>
+                        NPM
+                        <span class="tooltip" role="tooltip">Package managers for JS libraries</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Version Controls</h3>
+                <h3>Version Controls &amp; Collaboration</h3>
                 <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">Git/GitHub <span class="tooltip"
-                            role="tooltip">Advanced: Version control &amp; collaboration</span></div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-git-plain colored skill-logo" aria-hidden="true"></i>
+                        Git
+                        <span class="tooltip" role="tooltip">Distributed version control</span>
+                    </div>
+                    <div class="skill-tag" role="listitem" tabindex="0">
+                        <i class="devicon-github-original colored skill-logo" aria-hidden="true"></i>
+                        GitHub
+                        <span class="tooltip" role="tooltip">Collaboration, code review, issues</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- <div class="skill-category">
-        <h3>Testing</h3>
-        <div class="skills" role="list">
-          <div class="skill-tag" role="listitem" tabindex="0">Jest <span class="tooltip" role="tooltip">Intermediate: Unit testing</span></div>
-          <div class="skill-tag" role="listitem" tabindex="0">React Testing Library <span class="tooltip" role="tooltip">Intermediate: Component testing</span></div>
-        </div>
-      </div> -->
             <div class="skill-category">
                 <h3>Additional Skills</h3>
                 <div class="skills" role="list">
                     <div class="skill-tag" role="listitem" tabindex="0">
-                        Responsive Design <span class="tooltip" role="tooltip">Creating layouts adaptable to various
-                            screen sizes</span>
+                        <i class="devicon-responsive colored skill-logo" aria-hidden="true"></i>
+                        Responsive Design
+                        <span class="tooltip" role="tooltip">Creating layouts adaptable to various screen sizes</span>
                     </div>
                     <div class="skill-tag" role="listitem" tabindex="0">
-                        DOM Manipulation <span class="tooltip" role="tooltip">Dynamic interaction with HTML
-                            elements</span>
+                        <!-- <i class="devicon-html5-plain colored skill-logo" aria-hidden="true"></i> -->
+                        DOM Manipulation
+                        <span class="tooltip" role="tooltip">Dynamic interaction with HTML elements</span>
                     </div>
                     <div class="skill-tag" role="listitem" tabindex="0">
-                        REST APIs <span class="tooltip" role="tooltip">Design and consumption of RESTful services</span>
+                        <i class="devicon-nodejs-plain colored skill-logo" aria-hidden="true"></i>
+                        REST APIs
+                        <span class="tooltip" role="tooltip">Design and consumption of RESTful services</span>
                     </div>
                     <div class="skill-tag" role="listitem" tabindex="0">
-                        AJAX <span class="tooltip" role="tooltip">Asynchronous data loading without page reload</span>
+                        <i class="devicon-ajax-plain colored skill-logo" aria-hidden="true"></i>
+                        AJAX
+                        <span class="tooltip" role="tooltip">Asynchronous data loading without page reload</span>
                     </div>
                     <div class="skill-tag" role="listitem" tabindex="0">
-                        JSON <span class="tooltip" role="tooltip">Data interchange format used in APIs</span>
+                        <i class="devicon-json-plain colored skill-logo" aria-hidden="true"></i>
+                        JSON
+                        <span class="tooltip" role="tooltip">Data interchange format used in APIs</span>
                     </div>
                     <div class="skill-tag" role="listitem" tabindex="0">
-                        Accessibility <span class="tooltip" role="tooltip">Ensuring inclusive user experiences</span>
+                        <i class="devicon-accessibility-plain colored skill-logo" aria-hidden="true"></i>
+                        Accessibility
+                        <span class="tooltip" role="tooltip">Ensuring inclusive user experiences</span>
                     </div>
                     <div class="skill-tag" role="listitem" tabindex="0">
-                        Performance Optimization <span class="tooltip" role="tooltip">Improving website speed and
-                            efficiency</span>
+                        <i class="devicon-performance-plain colored skill-logo" aria-hidden="true"></i>
+                        Performance Optimization
+                        <span class="tooltip" role="tooltip">Improving website speed and efficiency</span>
                     </div>
                 </div>
             </div>
-
         </section>
 
+        <!-- ✅ Projects -->
         <section id="projects" tabindex="-1" aria-labelledby="projects-heading">
             <h2 id="projects-heading">Projects</h2>
-
             <div class="projects">
-                <article class="project" tabindex="0" aria-label="Portfolio website project">
+                <article class="project" tabindex="0">
                     <h3>Portfolio Website</h3>
                     <p>My personal portfolio built with React.js and Tailwind CSS. Showcases my projects and skills with
                         a clean UI.</p>
                     <a href="https://github.com/NarendraKoya/portfolio" target="_blank" rel="noopener noreferrer">View
-                        on GitHub</a>
+                        on GitHub</a> |
+                    <a href="https://narendrakoya-portfolio-demo.com" target="_blank" rel="noopener noreferrer">Live
+                        Demo</a>
                 </article>
 
-                <article class="project" tabindex="0" aria-label="Todo list app project">
+                <article class="project" tabindex="0">
                     <h3>Todo List App</h3>
                     <p>A productivity app with React.js featuring task creation, editing, and completion tracking.</p>
                     <a href="https://github.com/NarendraKoya/todo-app" target="_blank" rel="noopener noreferrer">View on
-                        GitHub</a>
+                        GitHub</a> |
+                    <a href="https://narendrakoya-todo-demo.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
                 </article>
 
-                <article class="project" tabindex="0" aria-label="Blog platform project">
+                <article class="project" tabindex="0">
                     <h3>Blog Platform</h3>
                     <p>A content management system built with Next.js, supporting markdown posts and SEO-friendly pages.
                     </p>
                     <a href="https://github.com/NarendraKoya/blog-platform" target="_blank"
-                        rel="noopener noreferrer">View on GitHub</a>
+                        rel="noopener noreferrer">View on GitHub</a> |
+                    <a href="https://narendrakoya-blog-demo.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
                 </article>
             </div>
         </section>
 
+        <!-- 🏆 New Achievements -->
+        <section id="achievements" tabindex="-1" aria-labelledby="achievements-heading">
+            <h2 id="achievements-heading">Achievements</h2>
+            <ul>
+                <li>
+                    🌟 Completed the prestigious <strong>GirlScript Summer of Code 2023</strong>, a global open-source
+                    program,
+                    ranking <strong>37th out of 1500+ participants</strong> for outstanding contributions in frontend
+                    development.
+                </li>
+            </ul>
+        </section>
+
+
+
+        <!-- ✅ Testimonials -->
+        <!-- <section id="testimonials" tabindex="-1" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading">Testimonials</h2>
+            <blockquote>
+                "Narendra delivered clean and performant code for our startup dashboard. Highly recommended!"
+                <cite>- Client: TechCorp</cite>
+            </blockquote>
+        </section> -->
+
+        <!-- ✅ Contact -->
         <section id="contact" tabindex="-1" aria-labelledby="contact-heading">
             <h2 id="contact-heading">Contact</h2>
             <p>You can reach me at <a href="mailto:narendra.koya@example.com">narendra.koya@example.com</a></p>
+
+            <!-- Contact Form -->
+            <!-- <form id="contact-form" action="https://formspree.io/f/your-id" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required />
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form> -->
         </section>
     </main>
 
+    <!-- ✅ Footer -->
     <footer role="contentinfo">
         <p>© 2025 Narendra Koya. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <!-- Analytics (Example: Plausible) -->
+    <script async defer data-domain="narendrakoya.dev" src="https://plausible.io/js/plausible.js"></script>
 </body>
 
 </html>
