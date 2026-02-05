@@ -4,8 +4,8 @@
 const themeToggleBtn = document.getElementById('theme-toggle');
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const currentTheme = localStorage.getItem('theme');
-const nameText = "Hello, I'm Narendra Koya";
-const taglineText = "🚀 Building performant, scalable, and accessible web apps with React & Next.js";
+const nameText = "Narendra Koya";
+const taglineText = "Building performant, scalable, and accessible web apps.";
 
 const nameTarget = document.getElementById('typewriter-name');
 const taglineTarget = document.getElementById('typewriter-tagline');
@@ -17,7 +17,7 @@ function typeName() {
   if (nameIndex < nameText.length) {
     nameTarget.textContent += nameText.charAt(nameIndex);
     nameIndex++;
-    setTimeout(typeName, 70);
+    setTimeout(typeName, 100);
   } else {
     // Start typing tagline after name finishes
     setTimeout(typeTagline, 500);
@@ -28,7 +28,7 @@ function typeTagline() {
   if (taglineIndex < taglineText.length) {
     taglineTarget.textContent += taglineText.charAt(taglineIndex);
     taglineIndex++;
-    setTimeout(typeTagline, 38);
+    setTimeout(typeTagline, 40);
   }
 }
 
@@ -91,21 +91,17 @@ const observer = new IntersectionObserver((entries, observer) => {
     if (entry.isIntersecting) {
       // Add staggered animation delay for list-like elements
       if (entry.target.parentElement && 
-          (entry.target.parentElement.matches('.skills') || entry.target.parentElement.matches('#achievements ul'))) {
-        const siblings = entry.target.parentElement.querySelectorAll(':scope > *');
-        siblings.forEach((el, i) => {
-          setTimeout(() => el.classList.add('visible'), i * 150); // 150ms stagger
-        });
-      } else {
-        entry.target.classList.add('visible');
-      }
+          (entry.target.parentElement.matches('.skills') || entry.target.parentElement.matches('.experience-timeline'))) {
+        // No stagger for timeline, just normal fade
+      } 
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observe targets (skills, projects, achievements, testimonials)
-document.querySelectorAll('.skill-tag, .project, #achievements li, #testimonials blockquote')
+// Observe targets (skills, projects, achievements, testimonials, experience)
+document.querySelectorAll('.skill-tag, .project, .experience-item')
   .forEach(el => observer.observe(el));
 
 // =======================
@@ -122,37 +118,12 @@ window.addEventListener('scroll', () => {
 // =======================
 // 📄 Download CV (Direct Download)
 // =======================
-document.getElementById('download-cv').addEventListener('click', () => {
-  const cvUrl = 'Narendra-Koya-CV.pdf'; // ✅ use actual hosted path
-  const a = document.createElement('a');
-  a.href = cvUrl;
-  a.download = 'Narendra-Koya-CV.pdf';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-});
-
-// =======================
-// 📨 Contact Form Validation
-// =======================
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    const name = contactForm.querySelector('#name');
-    const email = contactForm.querySelector('#email');
-    const message = contactForm.querySelector('#message');
-
-    // Simple front-end validation
-    if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-      e.preventDefault();
-      alert("⚠️ Please fill in all fields before submitting.");
-      return;
-    }
-    // ✅ Fixed Regex (removed extra backslashes)
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-      e.preventDefault();
-      alert("⚠️ Please enter a valid email address.");
-      return;
-    }
+const downloadBtn = document.getElementById('download-cv');
+if (downloadBtn) {
+  downloadBtn.addEventListener('click', () => {
+    const cvUrl = 'Narendra-Koya-CV.pdf'; // ✅ use actual hosted path
+    // Open in new tab or download
+    window.open(cvUrl, '_blank');
   });
 }
+

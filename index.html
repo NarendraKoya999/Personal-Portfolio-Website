@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Narendra Koya | Frontend Developer</title>
     <meta name="description"
-        content="Portfolio of Narendra Koya, a frontend developer building performant, scalable, and accessible web apps with React & Next.js." />
+        content="Portfolio of Narendra Koya, a frontend developer building performant, scalable, and accessible web apps with React, Next.js, and Vue.js." />
 
     <!-- ✅ SEO Keywords -->
     <meta name="keywords"
-        content="Narendra Koya, frontend developer, React.js, Next.js, TypeScript, Tailwind CSS, portfolio" />
+        content="Narendra Koya, frontend developer, React.js, Next.js, Vue.js, TypeScript, Tailwind CSS, portfolio, remote developer" />
 
     <!-- ✅ Open Graph -->
     <meta property="og:title" content="Narendra Koya | Frontend Developer Portfolio" />
     <meta property="og:description"
-        content="Building performant, scalable, and accessible web apps with React & Next.js." />
+        content="Building performant, scalable, and accessible web apps with React.js, Next.js & Vue.js." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="preview.png" /> <!-- replace with actual preview image -->
     <meta property="og:url" content="https://narendrakoya.dev" /> <!-- replace with your real domain -->
@@ -32,13 +32,14 @@
       "https://github.com/NarendraKoya",
       "https://linkedin.com/in/narendra-koya"
     ],
-    "knowsAbout": ["React.js", "Next.js", "TypeScript", "Frontend Development"]
+    "knowsAbout": ["React.js", "Next.js", "Vue.js", "TypeScript", "Frontend Development", "Web Accessibility"]
   }
   </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
@@ -51,10 +52,9 @@
             <a href="#" class="logo" aria-current="page">Narendra Koya</a>
             <ul class="nav-list" role="menubar">
                 <li role="none"><a href="#about" role="menuitem">About</a></li>
-                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
                 <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
-                <li role="none"><a href="#achievements" role="menuitem">Achievements</a></li>
-                <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
                 <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
 
@@ -74,254 +74,215 @@
             <p class="tagline">
                 <span id="typewriter-tagline"></span>
             </p>
-            <button id="download-cv" aria-label="Download my CV" onclick="window.open('Narendra-Koya-CV.pdf')">Download
-                CV</button>
+            <div class="intro-buttons">
+                <button id="download-cv" class="btn primary-btn" aria-label="Download my CV">Download CV</button>
+                <button onclick="window.location.href='#contact'" class="btn secondary-btn">Contact Me</button>
+            </div>
         </section>
 
-        <!-- ✅ About -->
+        <!-- ✅ Profile Summary (About) -->
         <section id="about" tabindex="-1" aria-labelledby="about-heading">
-            <h2 id="about-heading">About Me</h2>
-            <p>
-                I'm a passionate frontend developer with 1+ years of experience building responsive web applications.
-                My tech stack includes React.js, Next.js, TypeScript, Tailwind CSS, and Node.js.
-                I specialize in optimizing performance and creating intuitive user interfaces.
-            </p>
+            <h2 id="about-heading">Profile Summary</h2>
+            <div class="profile-summary">
+                <p>
+                    Frontend Developer with <strong>1+ year of professional experience</strong> building scalable,
+                    accessible, and
+                    performance-optimized web applications using <strong>React.js, Next.js, Vue.js, and
+                        TypeScript</strong>.
+                </p>
+                <p>
+                    Experienced in <strong>SSR, SEO optimization, Core Web Vitals</strong>, and <strong>WCAG-compliant
+                        UI development</strong>.
+                    Strong focus on clean, maintainable code and modern frontend best practices. I am passionate about
+                    creating efficient
+                    and user-friendly digital experiences.
+                </p>
+            </div>
         </section>
 
-        <!-- ✅ Skills -->
-        <section id="skills" tabindex="-1" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Skills</h2>
+        <!-- ✅ Professional Experience -->
+        <section id="experience" tabindex="-1" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Professional Experience</h2>
+            <div class="experience-timeline">
 
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-html5-plain colored skill-logo" aria-hidden="true"></i>
-                        HTML5
-                        <span class="tooltip" role="tooltip">Semantic markup</span>
+                <article class="experience-item" tabindex="0">
+                    <div class="exp-header">
+                        <h3>Frontend Developer</h3>
+                        <span class="company">TeKreant</span>
+                        <span class="date">11/2024 – 11/2025 | Hyderabad, India</span>
                     </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-css3-plain colored skill-logo" aria-hidden="true"></i>
-                        CSS3
-                        <span class="tooltip" role="tooltip">Modern styling &amp; animations</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-javascript-plain colored skill-logo" aria-hidden="true"></i>
-                        JavaScript (ES6+)
-                        <span class="tooltip" role="tooltip">Modern JavaScript</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-typescript-plain colored skill-logo" aria-hidden="true"></i>
-                        TypeScript
-                        <span class="tooltip" role="tooltip">Type-safe JavaScript</span>
-                    </div>
-                </div>
-            </div>
+                    <ul class="exp-details">
+                        <li>Developed and maintained component-based applications using <strong>React.js, Next.js,
+                                Vue.js</strong>, and <strong>Tailwind CSS</strong>.</li>
+                        <li>Implemented frontend features with focus on accessibility, responsiveness, and usability.
+                        </li>
+                        <li>Built <strong>AI-powered chat UI components</strong>, reducing customer support queries by
+                            <strong>15%</strong>.
+                        </li>
+                        <li>Improved SEO and initial load time by <strong>40%</strong> using Server-Side Rendering (SSR)
+                            and smart prefetching.</li>
+                        <li>Optimized performance using lazy loading, code splitting, and image optimization, aligned
+                            with Core Web Vitals.</li>
+                        <li>Managed state using Redux Toolkit and Vuex, improving API efficiency and render performance
+                            by <strong>35%</strong>.</li>
+                        <li>Developed WCAG-compliant components with proper ARIA roles and keyboard navigation.</li>
+                        <li>Collaborated with cross-functional teams in an Agile environment.</li>
+                    </ul>
+                </article>
 
-            <div class="skill-category">
-                <h3>Frameworks &amp; Libraries</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-react-original colored skill-logo" aria-hidden="true"></i>
-                        React.js
-                        <span class="tooltip" role="tooltip">Building dynamic UIs</span>
+                <article class="experience-item" tabindex="0">
+                    <div class="exp-header">
+                        <h3>Open Source Contributor</h3>
+                        <span class="company">GirlScript Summer of Code Season 2023</span>
+                        <span class="date">05/2023 – 08/2023 | <strong>Remote</strong>, India</span>
                     </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-nextjs-original-wordmark skill-logo" aria-hidden="true"></i>
-                        Next.js
-                        <span class="tooltip" role="tooltip">Server-side rendering &amp; static sites</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-vuejs-plain colored skill-logo" aria-hidden="true"></i>
-                        Vue.js
-                        <span class="tooltip" role="tooltip">Component-based UIs</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-tailwindcss-original colored skill-logo" aria-hidden="true"></i>
-                        Tailwind CSS
-                        <span class="tooltip" role="tooltip">Utility-first CSS</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-redux-original skill-logo" aria-hidden="true"></i>
-                        Redux Toolkit
-                        <span class="tooltip" role="tooltip">Global State Management</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-materialui-plain colored skill-logo" aria-hidden="true"></i>
-                        Material UI
-                        <span class="tooltip" role="tooltip">Component library</span>
-                    </div>
-                </div>
-            </div>
+                    <ul class="exp-details">
+                        <li>Contributed to <strong>35+ open-source repositories</strong>, focusing on frontend fixes and
+                            accessibility improvements.</li>
+                        <li>Improved application performance by <strong>~20%</strong> through caching, bundle
+                            optimization, and code splitting.</li>
+                    </ul>
+                </article>
 
-            <div class="skill-category">
-                <h3>Build Tools &amp; Package Managers</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-webpack-plain colored skill-logo" aria-hidden="true"></i>
-                        Webpack
-                        <span class="tooltip" role="tooltip">Module bundling</span>
+                <article class="experience-item" tabindex="0">
+                    <div class="exp-header">
+                        <h3>Site Engineer</h3>
+                        <span class="company">Halcyon Engineering and Constructions</span>
+                        <span class="date">06/2017 – 04/2023 | Telangana, India</span>
                     </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-babel-plain colored skill-logo" aria-hidden="true"></i>
-                        Babel
-                        <span class="tooltip" role="tooltip">JavaScript transpiling</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-vitejs-plain colored skill-logo" aria-hidden="true"></i>
-                        Vite
-                        <span class="tooltip" role="tooltip">Fast build tool</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-npm-original-wordmark colored skill-logo" aria-hidden="true"></i>
-                        NPM
-                        <span class="tooltip" role="tooltip">Package managers for JS libraries</span>
-                    </div>
-                </div>
-            </div>
+                    <ul class="exp-details">
+                        <li>Coordinated cross-functional teams and managed project execution with on-time delivery.</li>
+                        <li>Developed strong problem-solving, ownership, and communication skills applicable to software
+                            engineering.</li>
+                    </ul>
+                </article>
 
-            <div class="skill-category">
-                <h3>Version Controls &amp; Collaboration</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-git-plain colored skill-logo" aria-hidden="true"></i>
-                        Git
-                        <span class="tooltip" role="tooltip">Distributed version control</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-github-original colored skill-logo" aria-hidden="true"></i>
-                        GitHub
-                        <span class="tooltip" role="tooltip">Collaboration, code review, issues</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Additional Skills</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-responsive colored skill-logo" aria-hidden="true"></i>
-                        Responsive Design
-                        <span class="tooltip" role="tooltip">Creating layouts adaptable to various screen sizes</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <!-- <i class="devicon-html5-plain colored skill-logo" aria-hidden="true"></i> -->
-                        DOM Manipulation
-                        <span class="tooltip" role="tooltip">Dynamic interaction with HTML elements</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-nodejs-plain colored skill-logo" aria-hidden="true"></i>
-                        REST APIs
-                        <span class="tooltip" role="tooltip">Design and consumption of RESTful services</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-ajax-plain colored skill-logo" aria-hidden="true"></i>
-                        AJAX
-                        <span class="tooltip" role="tooltip">Asynchronous data loading without page reload</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-json-plain colored skill-logo" aria-hidden="true"></i>
-                        JSON
-                        <span class="tooltip" role="tooltip">Data interchange format used in APIs</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-accessibility-plain colored skill-logo" aria-hidden="true"></i>
-                        Accessibility
-                        <span class="tooltip" role="tooltip">Ensuring inclusive user experiences</span>
-                    </div>
-                    <div class="skill-tag" role="listitem" tabindex="0">
-                        <i class="devicon-performance-plain colored skill-logo" aria-hidden="true"></i>
-                        Performance Optimization
-                        <span class="tooltip" role="tooltip">Improving website speed and efficiency</span>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- ✅ Projects -->
         <section id="projects" tabindex="-1" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Projects</h2>
+            <h2 id="projects-heading">Client Projects</h2>
             <div class="projects">
-                <article class="project" tabindex="0">
-                    <h3>Portfolio Website</h3>
-                    <p>My personal portfolio built with React.js and Tailwind CSS. Showcases my projects and skills with
-                        a clean UI.</p>
-                    <a href="https://github.com/NarendraKoya/portfolio" target="_blank" rel="noopener noreferrer">View
-                        on GitHub</a> |
-                    <a href="https://narendrakoya-portfolio-demo.com" target="_blank" rel="noopener noreferrer">Live
-                        Demo</a>
-                </article>
 
                 <article class="project" tabindex="0">
-                    <h3>Todo List App</h3>
-                    <p>A productivity app with React.js featuring task creation, editing, and completion tracking.</p>
-                    <a href="https://github.com/NarendraKoya/todo-app" target="_blank" rel="noopener noreferrer">View on
-                        GitHub</a> |
-                    <a href="https://narendrakoya-todo-demo.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                </article>
-
-                <article class="project" tabindex="0">
-                    <h3>Blog Platform</h3>
-                    <p>A content management system built with Next.js, supporting markdown posts and SEO-friendly pages.
+                    <h3>Labsquire</h3>
+                    <p class="role-domain">Healthcare Domain | 03/2025 – 11/2025</p>
+                    <p>Migrated a legacy SPA to <strong>Vue.js with Vuex</strong>, improving load time by
+                        <strong>15%</strong>.
+                        Improved maintainability using a modular component architecture.
                     </p>
-                    <a href="https://github.com/NarendraKoya/blog-platform" target="_blank"
-                        rel="noopener noreferrer">View on GitHub</a> |
-                    <a href="https://narendrakoya-blog-demo.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <!-- <a href="#" class="project-link disabled">Proprietary / Internal</a> -->
                 </article>
+
+                <article class="project" tabindex="0">
+                    <h3>Mr Yoda</h3>
+                    <p class="role-domain">Healthcare Domain | 11/2024 – 02/2025</p>
+                    <p>Built a high-performance web application using <strong>React.js, Next.js, and
+                            TypeScript</strong>.
+                        Implemented an AI-driven chat assistant UI and achieved <strong>100/100 Lighthouse SEO
+                            score</strong>
+                        through SSR and performance tuning.</p>
+                </article>
+
+                <article class="project" tabindex="0">
+                    <h3>Personal Portfolio</h3>
+                    <p class="role-domain">Personal Project</p>
+                    <p>Designed this responsive, accessible portfolio to showcase my skills and experience. Built with
+                        HTML, CSS, and modern JS.</p>
+                    <a href="https://github.com/NarendraKoya/Personal-Portfolio-Website" target="_blank"
+                        rel="noopener noreferrer">View Source</a>
+                </article>
+
             </div>
         </section>
 
-        <!-- 🏆 New Achievements -->
-        <section id="achievements" tabindex="-1" aria-labelledby="achievements-heading">
-            <h2 id="achievements-heading">Achievements</h2>
-            <ul>
-                <li>
-                    🌟 Completed the prestigious <strong>GirlScript Summer of Code 2023</strong>, a global open-source
-                    program,
-                    ranking <strong>37th out of 1500+ participants</strong> for outstanding contributions in frontend
-                    development.
-                </li>
-            </ul>
+        <!-- ✅ Skills -->
+        <section id="skills" tabindex="-1" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
+
+            <div class="skill-category">
+                <h3>Frontend Core & Frameworks</h3>
+                <div class="skills" role="list">
+                    <div class="skill-tag" role="listitem">JavaScript (ES6+)</div>
+                    <div class="skill-tag" role="listitem">TypeScript</div>
+                    <div class="skill-tag" role="listitem">React.js</div>
+                    <div class="skill-tag" role="listitem">Next.js</div>
+                    <div class="skill-tag" role="listitem">Vue.js</div>
+                    <div class="skill-tag" role="listitem">HTML5 & CSS3</div>
+                    <div class="skill-tag" role="listitem">Tailwind CSS</div>
+                    <div class="skill-tag" role="listitem">SASS/SCSS</div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>State Management & UI</h3>
+                <div class="skills" role="list">
+                    <div class="skill-tag" role="listitem">Redux Toolkit</div>
+                    <div class="skill-tag" role="listitem">Vuex</div>
+                    <div class="skill-tag" role="listitem">Context API</div>
+                    <div class="skill-tag" role="listitem">Material UI</div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Performance & SEO</h3>
+                <div class="skills" role="list">
+                    <div class="skill-tag" role="listitem">SSR</div>
+                    <div class="skill-tag" role="listitem">Lazy Loading</div>
+                    <div class="skill-tag" role="listitem">Web Vitals</div>
+                    <div class="skill-tag" role="listitem">Lighthouse</div>
+                    <div class="skill-tag" role="listitem">Accessibility (WCAG)</div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Tools & Testing</h3>
+                <div class="skills" role="list">
+                    <div class="skill-tag" role="listitem">Git & GitHub</div>
+                    <div class="skill-tag" role="listitem">Webpack</div>
+                    <div class="skill-tag" role="listitem">Jest / RTL</div>
+                    <div class="skill-tag" role="listitem">Cypress</div>
+                    <div class="skill-tag" role="listitem">CI/CD</div>
+                </div>
+            </div>
         </section>
 
-
-
-        <!-- ✅ Testimonials -->
-        <!-- <section id="testimonials" tabindex="-1" aria-labelledby="testimonials-heading">
-            <h2 id="testimonials-heading">Testimonials</h2>
-            <blockquote>
-                "Narendra delivered clean and performant code for our startup dashboard. Highly recommended!"
-                <cite>- Client: TechCorp</cite>
-            </blockquote>
-        </section> -->
+        <!-- ✅ Education -->
+        <section id="education" tabindex="-1" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Technology (B.TECH)</h3>
+                <p>Universal College of Engineering & Technology</p>
+            </div>
+        </section>
 
         <!-- ✅ Contact -->
         <section id="contact" tabindex="-1" aria-labelledby="contact-heading">
             <h2 id="contact-heading">Contact</h2>
-            <p>You can reach me at <a href="mailto:narendra.koya@example.com">narendra.koya@example.com</a></p>
+            <p class="contact-text">
+                I am currently open to <strong>remote</strong> or hybrid opportunities.
+                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
 
-            <!-- Contact Form -->
-            <!-- <form id="contact-form" action="https://formspree.io/f/your-id" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="_replyto" required />
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form> -->
+            <div class="contact-actions">
+                <a href="mailto:narendrakoya999@gmail.com" class="btn primary-btn">Say Hello</a>
+                <!-- Update email if user provided a different one, using the one from corpus name as a hint or placeholder -->
+            </div>
         </section>
     </main>
 
     <!-- ✅ Footer -->
     <footer role="contentinfo">
-        <p>© 2025 Narendra Koya. All rights reserved.</p>
+        <p>© 2026 Narendra Koya. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/NarendraKoya" target="_blank" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/narendra-koya" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        </div>
     </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
-    <!-- Analytics (Example: Plausible) -->
-    <script async defer data-domain="narendrakoya.dev" src="https://plausible.io/js/plausible.js"></script>
 </body>
 
 </html>
