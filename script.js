@@ -1,129 +1,96 @@
-// =======================
-// 🌙 Dark Mode Toggle
-// =======================
-const themeToggleBtn = document.getElementById('theme-toggle');
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-const currentTheme = localStorage.getItem('theme');
-const nameText = "Narendra Koya";
-const taglineText = "Building performant, scalable, and accessible web apps.";
+// Mobile menu toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
 
-const nameTarget = document.getElementById('typewriter-name');
-const taglineTarget = document.getElementById('typewriter-tagline');
-
-let nameIndex = 0;
-let taglineIndex = 0;
-
-function typeName() {
-  if (nameIndex < nameText.length) {
-    nameTarget.textContent += nameText.charAt(nameIndex);
-    nameIndex++;
-    setTimeout(typeName, 100);
-  } else {
-    // Start typing tagline after name finishes
-    setTimeout(typeTagline, 500);
-  }
-}
-
-function typeTagline() {
-  if (taglineIndex < taglineText.length) {
-    taglineTarget.textContent += taglineText.charAt(taglineIndex);
-    taglineIndex++;
-    setTimeout(typeTagline, 40);
-  }
-}
-
-if (nameTarget && taglineTarget) {
-  nameTarget.textContent = "";
-  taglineTarget.textContent = "";
-  typeName();
-}
-
-
-if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-  document.body.classList.add('dark');
-  themeToggleBtn.setAttribute('aria-label', 'Switch to light mode');
-  themeToggleBtn.setAttribute('aria-pressed', 'true');
-} else {
-  themeToggleBtn.setAttribute('aria-label', 'Switch to dark mode');
-  themeToggleBtn.setAttribute('aria-pressed', 'false');
-}
-
-themeToggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  if (document.body.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-    themeToggleBtn.setAttribute('aria-label', 'Switch to light mode');
-    themeToggleBtn.setAttribute('aria-pressed', 'true');
-  } else {
-    localStorage.setItem('theme', 'light');
-    themeToggleBtn.setAttribute('aria-label', 'Switch to dark mode');
-    themeToggleBtn.setAttribute('aria-pressed', 'false');
-  }
+mobileMenuBtn.addEventListener('click', () => {
+    const isExpanded = navLinks.classList.toggle('active');
+    mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
 });
 
-// =======================
-// 📱 Burger Menu Toggle
-// =======================
-const menuToggleBtn = document.getElementById('menu-toggle');
-const navList = document.querySelector('.nav-list');
-
-menuToggleBtn.addEventListener('click', () => {
-  navList.classList.toggle('show');
-  const isOpened = navList.classList.contains('show');
-  menuToggleBtn.setAttribute('aria-label', isOpened ? "Close menu" : "Open menu");
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    });
 });
 
-// Close menu on link click (mobile UX)
-navList.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navList.classList.remove('show');
-    menuToggleBtn.setAttribute('aria-label', "Open menu");
-  });
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
-// =======================
-// 🎬 Scroll Animation with Stagger
-// =======================
-const observerOptions = { threshold: 0.1 };
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // Add staggered animation delay for list-like elements
-      if (entry.target.parentElement && 
-          (entry.target.parentElement.matches('.skills') || entry.target.parentElement.matches('.experience-timeline'))) {
-        // No stagger for timeline, just normal fade
-      } 
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
 }, observerOptions);
 
-// Observe targets (skills, projects, achievements, testimonials, experience)
-document.querySelectorAll('.skill-tag, .project, .experience-item')
-  .forEach(el => observer.observe(el));
-
-// =======================
-// 📊 Scroll progress bar
-// =======================
-const scrollProgress = document.getElementById('scroll-progress');
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  scrollProgress.style.width = scrollPercent + '%';
+// Observe all fade-in elements
+document.querySelectorAll('.fade-in').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    observer.observe(el);
 });
 
-// =======================
-// 📄 Download CV (Direct Download)
-// =======================
-const downloadBtn = document.getElementById('download-cv');
-if (downloadBtn) {
-  downloadBtn.addEventListener('click', () => {
-    const cvUrl = 'Narendra-Koya-CV.pdf'; // ✅ use actual hosted path
-    // Open in new tab or download
-    window.open(cvUrl, '_blank');
-  });
+// Add active state to navigation based on scroll position
+window.addEventListener('scroll', () => {
+    let current = '';
+    const sections = document.querySelectorAll('section[id]');
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Add typing effect to hero title (optional enhancement)
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
 }
 
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Add any initialization code here
+    console.log('Portfolio loaded successfully!');
+});

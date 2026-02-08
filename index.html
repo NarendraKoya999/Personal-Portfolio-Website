@@ -1,288 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Narendra Koya - Frontend Developer with 1+ year of experience in React.js, Next.js, Vue.js, and TypeScript">
     <title>Narendra Koya | Frontend Developer</title>
-    <meta name="description"
-        content="Portfolio of Narendra Koya, a frontend developer building performant, scalable, and accessible web apps with React, Next.js, and Vue.js." />
-
-    <!-- ✅ SEO Keywords -->
-    <meta name="keywords"
-        content="Narendra Koya, frontend developer, React.js, Next.js, Vue.js, TypeScript, Tailwind CSS, portfolio, remote developer" />
-
-    <!-- ✅ Open Graph -->
-    <meta property="og:title" content="Narendra Koya | Frontend Developer Portfolio" />
-    <meta property="og:description"
-        content="Building performant, scalable, and accessible web apps with React.js, Next.js & Vue.js." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="preview.png" /> <!-- replace with actual preview image -->
-    <meta property="og:url" content="https://narendrakoya.dev" /> <!-- replace with your real domain -->
-
-    <!-- ✅ Schema Markup -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Narendra Koya",
-    "url": "https://narendrakoya.dev",
-    "jobTitle": "Frontend Developer",
-    "sameAs": [
-      "https://github.com/NarendraKoya",
-      "https://linkedin.com/in/narendra-koya"
-    ],
-    "knowsAbout": ["React.js", "Next.js", "Vue.js", "TypeScript", "Frontend Development", "Web Accessibility"]
-  }
-  </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div id="scroll-progress"></div>
-
-    <header class="header" role="banner">
-        <nav class="nav" aria-label="Primary navigation">
-            <a href="#" class="logo" aria-current="page">Narendra Koya</a>
-            <ul class="nav-list" role="menubar">
-                <li role="none"><a href="#about" role="menuitem">About</a></li>
-                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
-                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
-                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
-                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">NK</div>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <!-- Add a container for the buttons -->
-            <div class="nav-buttons">
-                <button id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode"
-                    aria-pressed="false">🌓</button>
-                <button id="menu-toggle" aria-label="Open menu">☰</button>
-            </div>
         </nav>
     </header>
 
-    <main role="main">
-        <!-- ✅ Intro -->
-        <section class="intro" aria-label="Introduction">
-            <h1><span id="typewriter-name"></span></h1>
-            <p class="tagline">
-                <span id="typewriter-tagline"></span>
-            </p>
-            <div class="intro-buttons">
-                <button id="download-cv" class="btn primary-btn" aria-label="Download my CV">Download CV</button>
-                <button onclick="window.location.href='#contact'" class="btn secondary-btn">Contact Me</button>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="hero-content fade-in">
+                <h1>Hi, I'm <span class="highlight">Narendra Koya</span></h1>
+                <p>Frontend Developer specializing in building scalable, accessible, and performance-optimized web applications with React, Next.js, and Vue.js</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
             </div>
-        </section>
-
-        <!-- ✅ Profile Summary (About) -->
-        <section id="about" tabindex="-1" aria-labelledby="about-heading">
-            <h2 id="about-heading">Profile Summary</h2>
-            <div class="profile-summary">
-                <p>
-                    Frontend Developer with <strong>1+ year of professional experience</strong> building scalable,
-                    accessible, and
-                    performance-optimized web applications using <strong>React.js, Next.js, Vue.js, and
-                        TypeScript</strong>.
-                </p>
-                <p>
-                    Experienced in <strong>SSR, SEO optimization, Core Web Vitals</strong>, and <strong>WCAG-compliant
-                        UI development</strong>.
-                    Strong focus on clean, maintainable code and modern frontend best practices. I am passionate about
-                    creating efficient
-                    and user-friendly digital experiences.
-                </p>
-            </div>
-        </section>
-
-        <!-- ✅ Professional Experience -->
-        <section id="experience" tabindex="-1" aria-labelledby="experience-heading">
-            <h2 id="experience-heading">Professional Experience</h2>
-            <div class="experience-timeline">
-
-                <article class="experience-item" tabindex="0">
-                    <div class="exp-header">
-                        <h3>Frontend Developer</h3>
-                        <span class="company">TeKreant</span>
-                        <span class="date">11/2024 – 11/2025 | Hyderabad, India</span>
+            <div class="hero-image fade-in">
+                <div class="profile-card">
+                    <div class="profile-avatar">NK</div>
+                    <h2>Frontend Developer</h2>
+                    <p style="color: var(--secondary);">Hyderabad, India</p>
+                    <div class="social-links">
+                        <!-- Email -->
+                        <div class="tooltip-container">
+                            <a href="mailto:narendra.koya.in@gmail.com" aria-label="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb" width="24" height="24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </a>
+                            <span class="tooltip">narendra.koya.in@gmail.com</span>
+                        </div>
+                        
+                        <!-- LinkedIn -->
+                        <div class="tooltip-container">
+                            <a href="https://linkedin.com/in/narendra-koya" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb" width="24" height="24">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                </svg>
+                            </a>
+                            <span class="tooltip">linkedin.com/in/narendra-koya</span>
+                        </div>
+                        
+                        <!-- GitHub -->
+                        <div class="tooltip-container">
+                            <a href="https://github.com/NarendraKoya999" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb" width="24" height="24">
+                                    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                                </svg>
+                            </a>
+                            <span class="tooltip">github.com/NarendraKoya999</span>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="tooltip-container">
+                            <a href="tel:+917032359307" aria-label="Phone">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb" width="24" height="24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </a>
+                            <span class="tooltip">+91 7032359307</span>
+                        </div>
                     </div>
-                    <ul class="exp-details">
-                        <li>Developed and maintained component-based applications using <strong>React.js, Next.js,
-                                Vue.js</strong>, and <strong>Tailwind CSS</strong>.</li>
-                        <li>Implemented frontend features with focus on accessibility, responsiveness, and usability.
-                        </li>
-                        <li>Built <strong>AI-powered chat UI components</strong>, reducing customer support queries by
-                            <strong>15%</strong>.
-                        </li>
-                        <li>Improved SEO and initial load time by <strong>40%</strong> using Server-Side Rendering (SSR)
-                            and smart prefetching.</li>
-                        <li>Optimized performance using lazy loading, code splitting, and image optimization, aligned
-                            with Core Web Vitals.</li>
-                        <li>Managed state using Redux Toolkit and Vuex, improving API efficiency and render performance
-                            by <strong>35%</strong>.</li>
-                        <li>Developed WCAG-compliant components with proper ARIA roles and keyboard navigation.</li>
-                        <li>Collaborated with cross-functional teams in an Agile environment.</li>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <article class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Frontend Developer</h3>
+                            <p class="company">TeKreant</p>
+                        </div>
+                        <div class="experience-date">Nov 2024 – Nov 2025 | Hyderabad, India</div>
+                    </div>
+                    <ul>
+                        <li>Developed and maintained component-based applications using React.js, Next.js, Vue.js, and Tailwind CSS</li>
+                        <li>Built AI-powered chat UI components, reducing customer support queries by 15%</li>
+                        <li>Improved SEO and initial load time by 40% using Server-Side Rendering (SSR) and smart prefetching</li>
+                        <li>Optimized performance using lazy loading, code splitting, and image optimization aligned with Core Web Vitals</li>
+                        <li>Managed state using Redux Toolkit and Vuex, improving API efficiency and render performance by 35%</li>
+                        <li>Developed WCAG-compliant components with proper ARIA roles and keyboard navigation</li>
+                        <li>Collaborated with cross-functional teams in an Agile environment</li>
                     </ul>
                 </article>
 
-                <article class="experience-item" tabindex="0">
-                    <div class="exp-header">
-                        <h3>Open Source Contributor</h3>
-                        <span class="company">GirlScript Summer of Code Season 2023</span>
-                        <span class="date">05/2023 – 08/2023 | <strong>Remote</strong>, India</span>
+                <article class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Open Source Contributor</h3>
+                            <p class="company">GirlScript Summer of Code Season 2023</p>
+                        </div>
+                        <div class="experience-date">May 2023 – Aug 2023 | Remote, India</div>
                     </div>
-                    <ul class="exp-details">
-                        <li>Contributed to <strong>35+ open-source repositories</strong>, focusing on frontend fixes and
-                            accessibility improvements.</li>
-                        <li>Improved application performance by <strong>~20%</strong> through caching, bundle
-                            optimization, and code splitting.</li>
+                    <ul>
+                        <li>Contributed to 35+ open-source repositories, focusing on frontend fixes and accessibility improvements</li>
+                        <li>Improved application performance by ~20% through caching, bundle optimization, and code splitting</li>
                     </ul>
                 </article>
 
-                <article class="experience-item" tabindex="0">
-                    <div class="exp-header">
-                        <h3>Site Engineer</h3>
-                        <span class="company">Halcyon Engineering and Constructions</span>
-                        <span class="date">06/2017 – 04/2023 | Telangana, India</span>
+                <article class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Site Engineer</h3>
+                            <p class="company">Halcyon Engineering and Constructions</p>
+                        </div>
+                        <div class="experience-date">Jun 2017 – Apr 2023 | Telangana, India</div>
                     </div>
-                    <ul class="exp-details">
-                        <li>Coordinated cross-functional teams and managed project execution with on-time delivery.</li>
-                        <li>Developed strong problem-solving, ownership, and communication skills applicable to software
-                            engineering.</li>
+                    <ul>
+                        <li>Coordinated cross-functional teams and managed project execution with on-time delivery</li>
+                        <li>Developed strong problem-solving, ownership, and communication skills</li>
                     </ul>
                 </article>
-
             </div>
         </section>
 
-        <!-- ✅ Projects -->
-        <section id="projects" tabindex="-1" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Client Projects</h2>
-            <div class="projects">
-
-                <article class="project" tabindex="0">
-                    <h3>Labsquire</h3>
-                    <p class="role-domain">Healthcare Domain | 03/2025 – 11/2025</p>
-                    <p>Migrated a legacy SPA to <strong>Vue.js with Vuex</strong>, improving load time by
-                        <strong>15%</strong>.
-                        Improved maintainability using a modular component architecture.
-                    </p>
-                    <!-- <a href="#" class="project-link disabled">Proprietary / Internal</a> -->
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card fade-in">
+                    <div class="project-header">
+                        <h3>Labsquire</h3>
+                        <p class="project-domain">Healthcare Domain</p>
+                        <p class="project-domain">Mar 2025 – Nov 2025</p>
+                    </div>
+                    <div class="project-body">
+                        <ul>
+                            <li>Migrated legacy SPA to Vue.js with Vuex</li>
+                            <li>Improved load time by 15%</li>
+                            <li>Enhanced maintainability using modular component architecture</li>
+                        </ul>
+                    </div>
                 </article>
 
-                <article class="project" tabindex="0">
-                    <h3>Mr Yoda</h3>
-                    <p class="role-domain">Healthcare Domain | 11/2024 – 02/2025</p>
-                    <p>Built a high-performance web application using <strong>React.js, Next.js, and
-                            TypeScript</strong>.
-                        Implemented an AI-driven chat assistant UI and achieved <strong>100/100 Lighthouse SEO
-                            score</strong>
-                        through SSR and performance tuning.</p>
+                <article class="project-card fade-in">
+                    <div class="project-header">
+                        <h3>Mr Yoda</h3>
+                        <p class="project-domain">Healthcare Domain</p>
+                        <p class="project-domain">Nov 2024 – Feb 2025</p>
+                    </div>
+                    <div class="project-body">
+                        <ul>
+                            <li>Built high-performance web app with React.js, Next.js, TypeScript, Tailwind CSS</li>
+                            <li>Implemented AI-driven chat assistant UI</li>
+                            <li>Achieved 100/100 Lighthouse SEO score through SSR and optimization</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container">
+                <article class="skill-category fade-in">
+                    <h3>Frontend</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">SASS/SCSS</span>
+                    </div>
                 </article>
 
-                <article class="project" tabindex="0">
-                    <h3>Personal Portfolio</h3>
-                    <p class="role-domain">Personal Project</p>
-                    <p>Designed this responsive, accessible portfolio to showcase my skills and experience. Built with
-                        HTML, CSS, and modern JS.</p>
-                    <a href="https://github.com/NarendraKoya/Personal-Portfolio-Website" target="_blank"
-                        rel="noopener noreferrer">View Source</a>
+                <article class="skill-category fade-in">
+                    <h3>State Management & UI</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Redux Toolkit</span>
+                        <span class="skill-tag">Vuex</span>
+                        <span class="skill-tag">Context API</span>
+                        <span class="skill-tag">Material UI</span>
+                    </div>
                 </article>
 
+                <article class="skill-category fade-in">
+                    <h3>Performance & SEO</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">SSR</span>
+                        <span class="skill-tag">Lazy Loading</span>
+                        <span class="skill-tag">Code Splitting</span>
+                        <span class="skill-tag">Image Optimization</span>
+                        <span class="skill-tag">Core Web Vitals</span>
+                        <span class="skill-tag">Lighthouse</span>
+                    </div>
+                </article>
+
+                <article class="skill-category fade-in">
+                    <h3>Accessibility & Testing</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">WCAG</span>
+                        <span class="skill-tag">ARIA</span>
+                        <span class="skill-tag">Semantic HTML</span>
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">React Testing Library</span>
+                        <span class="skill-tag">Cypress</span>
+                    </div>
+                </article>
+
+                <article class="skill-category fade-in">
+                    <h3>Tools & APIs</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">NPM/Yarn</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- ✅ Skills -->
-        <section id="skills" tabindex="-1" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Technical Skills</h2>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                
+                <div class="contact-icons">
+                    <!-- Email -->
+                    <div class="tooltip-container">
+                        <a href="mailto:narendra.koya.in@gmail.com" class="contact-icon-link">
+                            <div class="icon-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <span class="icon-label">Email</span>
+                        </a>
+                        <span class="tooltip">narendra.koya.in@gmail.com</span>
+                    </div>
 
-            <div class="skill-category">
-                <h3>Frontend Core & Frameworks</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem">JavaScript (ES6+)</div>
-                    <div class="skill-tag" role="listitem">TypeScript</div>
-                    <div class="skill-tag" role="listitem">React.js</div>
-                    <div class="skill-tag" role="listitem">Next.js</div>
-                    <div class="skill-tag" role="listitem">Vue.js</div>
-                    <div class="skill-tag" role="listitem">HTML5 & CSS3</div>
-                    <div class="skill-tag" role="listitem">Tailwind CSS</div>
-                    <div class="skill-tag" role="listitem">SASS/SCSS</div>
+                    <!-- Phone -->
+                    <div class="tooltip-container">
+                        <a href="tel:+917032359307" class="contact-icon-link">
+                            <div class="icon-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </div>
+                        <span class="icon-label">Phone</span>
+                    </a>
+                    <span class="tooltip">+91 7032359307</span>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="tooltip-container">
+                    <a href="https://linkedin.com/in/narendra-koya" target="_blank" rel="noopener noreferrer" class="contact-icon-link">
+                        <div class="icon-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </div>
+                        <span class="icon-label">LinkedIn</span>
+                    </a>
+                    <span class="tooltip">linkedin.com/in/narendra-koya</span>
+                </div>
+
+                <!-- GitHub -->
+                <div class="tooltip-container">
+                    <a href="https://github.com/NarendraKoya999" target="_blank" rel="noopener noreferrer" class="contact-icon-link">
+                        <div class="icon-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb">
+                                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                            </svg>
+                        </div>
+                        <span class="icon-label">GitHub</span>
+                    </a>
+                    <span class="tooltip">github.com/NarendraKoya999</span>
                 </div>
             </div>
-
-            <div class="skill-category">
-                <h3>State Management & UI</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem">Redux Toolkit</div>
-                    <div class="skill-tag" role="listitem">Vuex</div>
-                    <div class="skill-tag" role="listitem">Context API</div>
-                    <div class="skill-tag" role="listitem">Material UI</div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Performance & SEO</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem">SSR</div>
-                    <div class="skill-tag" role="listitem">Lazy Loading</div>
-                    <div class="skill-tag" role="listitem">Web Vitals</div>
-                    <div class="skill-tag" role="listitem">Lighthouse</div>
-                    <div class="skill-tag" role="listitem">Accessibility (WCAG)</div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Tools & Testing</h3>
-                <div class="skills" role="list">
-                    <div class="skill-tag" role="listitem">Git & GitHub</div>
-                    <div class="skill-tag" role="listitem">Webpack</div>
-                    <div class="skill-tag" role="listitem">Jest / RTL</div>
-                    <div class="skill-tag" role="listitem">Cypress</div>
-                    <div class="skill-tag" role="listitem">CI/CD</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ✅ Education -->
-        <section id="education" tabindex="-1" aria-labelledby="education-heading">
-            <h2 id="education-heading">Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Technology (B.TECH)</h3>
-                <p>Universal College of Engineering & Technology</p>
-            </div>
-        </section>
-
-        <!-- ✅ Contact -->
-        <section id="contact" tabindex="-1" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact</h2>
-            <p class="contact-text">
-                I am currently open to <strong>remote</strong> or hybrid opportunities.
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            </p>
-
-            <div class="contact-actions">
-                <a href="mailto:narendra.koya.in@gmail.com" class="btn primary-btn">Say Hello</a>
-                <!-- Update email if user provided a different one, using the one from corpus name as a hint or placeholder -->
-            </div>
-        </section>
-    </main>
-
-    <!-- ✅ Footer -->
-    <footer role="contentinfo">
-        <p>© 2026 Narendra Koya. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/NarendraKoya999" target="_blank" aria-label="GitHub">GitHub</a>
-            <a href="https://linkedin.com/in/narendra-koya" target="_blank" aria-label="LinkedIn">LinkedIn</a>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+<!-- Footer -->
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> Narendra Koya. All Rights are Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
