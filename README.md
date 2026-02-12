@@ -206,8 +206,9 @@ portfolio-website/
 - **First Contentful Paint (FCP)**: < 1.0s
 - **Largest Contentful Paint (LCP)**: < 2.5s
 - **Cumulative Layout Shift (CLS)**: < 0.1
-- **Time to Interactive (TTI)**: < 3.0s
+- **Time to Interactive (TTI)**: < 3.0s (TTI (Time to Interactive) is no longer shown in Lighthouse Performance reports.)
 - **Total Blocking Time (TBT)**: < 200ms
+- **Speed Index**: < 3.4s
 
 ## 🎓 Learning Outcomes
 
