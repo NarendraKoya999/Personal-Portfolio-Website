@@ -294,7 +294,7 @@ Contributions, issues, and feature requests are welcome!
 
 For any queries or support, feel free to reach out:
 
-- 📧 Email: [narendra.koya.in@gmail.com](mailto:narendra.koya.in@gmail.com)
+- 📧 Email: [narendra.koya.in@gmail.com](https://tinyurl.com/2rmzb8xa)
 - 💼 LinkedIn: [Narendra Koya](https://linkedin.com/in/narendra-koya)
 - 🐙 GitHub: [@NarendraKoya999](https://github.com/NarendraKoya999)
 
