@@ -260,7 +260,7 @@ This project is licensed under the MIT License - see the [MIT License](https://o
 - 🌐 Website: [Narendra Koya](https://narendrakoya999.github.io/Personal-Portfolio-Website/)
 - 💼 LinkedIn: [linkedin.com/in/narendra-koya](https://linkedin.com/in/narendra-koya)
 - 🐙 GitHub: [@NarendraKoya999](https://github.com/NarendraKoya999)
-- 📧 Email: narendra.koya.in@gmail.com
+- 📧 Email: [narendra.koya.in@gmail.com](https://mail.google.com/mail/?view=cm&to=narendra.koya.in@gmail.com)
 - 📱 Phone: +91 7032359307
 
 ## 🤝 Contributing
@@ -291,12 +291,15 @@ Contributions, issues, and feature requests are welcome!
 - Color Palette: Tailwind CSS inspired
 
 ## 📞 Contact & Support
-
 For any queries or support, feel free to reach out:
 
-- 📧 Email: [narendra.koya.in@gmail.com](https://tinyurl.com/2rmzb8xa)
-- 💼 LinkedIn: [Narendra Koya](https://linkedin.com/in/narendra-koya)
-- 🐙 GitHub: [@NarendraKoya999](https://github.com/NarendraKoya999)
+<div>
+
+[![Email](https://img.shields.io/badge/Email-Contact-D44638?style=flat-square&logo=gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&to=narendra.koya.in@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/narendra-koya)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/NarendraKoya999)
+
+</div>
 
 ---
 
